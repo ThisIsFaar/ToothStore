@@ -7,7 +7,7 @@ Live Hosted At: https://tooth-store.netlify.app/
 ## Features/Tech Stack
 
 - Single Page Application built over ReactJS, TailwindCSS
-- Dummy API is used "https://fakestoreapi.com/products" for smaple ecommerce data and some custom parameters have added required for the UI
+- Dummy API is used "https://fakestoreapi.com/products" for sample ecommerce data and some custom parameters have added required for the UI
 - On the top left corner there are dropdowns which will filter out the products based on the filter applied.
 - On the right corner there is a search bar in which user can search for products and based on the keywords entered the matching products would be filtered out and be shown on the page.
 - In each product there is a a cart icon and an input in which the user can add the quantity of product the user wants to buy. And there will be a checkbox next to the cart icon and only those products which are selected will be added to cart and will be visible on cart summary page.

@@ -5,6 +5,7 @@ const Context = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, {
     products: [],
     cart: [],
+    loading: false,
   });
 
   useEffect(() => {

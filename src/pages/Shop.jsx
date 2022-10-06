@@ -6,6 +6,7 @@ import { CartState } from '../context/Context';
 const Shop = () => {
   const {
     state: { products },
+    loading,
   } = CartState();
 
   const {
@@ -52,7 +53,7 @@ const Shop = () => {
             </table>
             {filterData().length <= 0 && (
               <div className="flex justify-center p-20">
-                No Matching Product Found
+                No Matching Product Found, or maybe dealy in the server
               </div>
             )}
           </div>
