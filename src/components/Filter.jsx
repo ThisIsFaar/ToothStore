@@ -1,6 +1,6 @@
+import { Link } from 'react-router-dom';
 import { CartState } from '../context/Context';
 import { categoryFilter, ratingFilter } from '../data';
-
 const Filter = () => {
   const {
     filterProductState: { byCategory, byRating, bySearch },
@@ -8,7 +8,7 @@ const Filter = () => {
   } = CartState();
 
   return (
-    <div class=" flex items-center justify-between p-6">
+    <div class=" flex items-center filterSection justify-between p-6">
       <div className="inline-flex">
         <select
           id="countries"
@@ -58,7 +58,7 @@ const Filter = () => {
         </button>
       </div>
 
-      <div class="flex items-center justify-between">
+      <div class="flex items-center filterSectionSearch justify-between">
         <div class="flex bg-gray-50 items-center p-2 rounded-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -88,9 +88,11 @@ const Filter = () => {
           />
         </div>
         <div class="lg:ml-40 ml-10 space-x-8">
-          <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">
-            Add To Cart
-          </button>
+          <Link to="cart">
+            <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">
+              Add To Cart
+            </button>
+          </Link>
         </div>
       </div>
     </div>

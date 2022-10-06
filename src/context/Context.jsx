@@ -14,6 +14,9 @@ const Context = ({ children }) => {
         let allData = products.map((product) => {
           product.quantity = Math.floor(Math.random() * 10);
           product.inStock = product.quantity ? true : false;
+          product.inCart = false;
+          product.inCartQuantity = 1;
+          product.price = Math.floor(product.price);
           return product;
         });
         dispatch({ type: 'fetchData', payload: allData });

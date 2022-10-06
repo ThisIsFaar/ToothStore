@@ -6,6 +6,29 @@ export const cartReducer = (state, action) => {
         products: action.payload,
       };
 
+    case 'addRemoveToCart':
+      return {
+        ...state,
+        inCart: action.payload,
+      };
+
+    case 'addCartQuantity':
+      return {
+        ...state,
+        inCart: action.payload,
+      };
+
+    case 'updateCartData':
+      return {
+        ...state,
+        inCart: action.payload,
+      };
+
+    case 'shipCartOrder':
+      return {
+        ...state,
+        inCart: action.payload,
+      };
     default:
       break;
   }
