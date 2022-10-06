@@ -77,7 +77,7 @@ const ProductRow = ({ product }) => {
               aria-hidden
               className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
             ></span>
-            <span className="relative">In Stock</span>
+            <span className="relative">{quantity} In Stock</span>
           </span>
         ) : (
           <span className="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight">
