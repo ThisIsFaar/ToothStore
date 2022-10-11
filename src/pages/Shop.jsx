@@ -15,25 +15,30 @@ const Shop = () => {
   const filterData = () => {
     let data = [...products];
 
-    if (byCategory !== 'all') {
-      data = data.filter(
-        (item) => item.category.toLowerCase() === byCategory.toLowerCase()
-      );
-    }
+    if (byCategory !== 'all' || byRating !== 'all' || bySearch != '') {
+      data = data.filter((item) => {
+        if (
+          byCategory !== 'all' &&
+          item.category.toLowerCase() !== byCategory.toLowerCase()
+        )
+          return false;
+        if (
+          byRating !== 'all' &&
+          Number(Math.floor(item.rating.rate)) !== Number(byRating)
+        )
+          return false;
 
-    if (byRating !== 'all') {
-      data = data.filter((item) => Math.floor(item.rating.rate) == byRating);
-    }
+        if (
+          bySearch != '' &&
+          !item.title.toLowerCase().includes(bySearch.toLowerCase())
+        )
+          return false;
 
-    if (bySearch != '') {
-      data = data.filter((item) =>
-        item.title.toLowerCase().includes(bySearch.toLowerCase())
-      );
+        return true;
+      });
     }
-
     return data;
   };
-
   console.log(filterData());
   return (
     <>
